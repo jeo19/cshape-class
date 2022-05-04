@@ -12,9 +12,11 @@ namespace CuteCat
 {
     public partial class Form1 : Form
     {
+        private Cat MyCat=new Cat("lucas",1);
         public Form1()
         {
             InitializeComponent();
+
         }
     }
 }
