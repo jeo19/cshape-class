@@ -18,13 +18,29 @@ namespace CuteCat
             this.Age = age;
         }
 
-        void Paly()
+        public void Paly()
         {
             Happiness = Happiness + 1;
             if(Happiness > 100)
-            {
                 Happiness = 100;
-            }
+        }
+        public void Eat()
+        {
+            Happiness = Happiness + 20;
+            if(Happiness > 100)
+                Happiness=100;
+
+
+        }
+        public string Express()
+        {
+            string message = "";
+            if (Happiness >= 80)
+                message = "I am very happy.";
+            else if (Happiness >= 60)
+                message = "I am happy.";
+            else if (Happiness >= 40)
+                message = "I am just that.";
         }
     }
 }
