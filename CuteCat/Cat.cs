@@ -18,6 +18,13 @@ namespace CuteCat
             this.Age = age;
         }
 
+        public void GetBored()
+        {
+            Happiness = Happiness - 20;
+            if (Happiness < 0)
+                Happiness = 0;
+        }
+
         public void Paly()
         {
             Happiness = Happiness + 1;
@@ -36,11 +43,16 @@ namespace CuteCat
         {
             string message = "";
             if (Happiness >= 80)
-                message = "I am very happy.";
+                message = "I'm very happy.";
             else if (Happiness >= 60)
-                message = "I am happy.";
+                message = "I'm happy.";
             else if (Happiness >= 40)
-                message = "I am just that.";
+                message = "I'm just that.";
+            else if (Happiness >= 20)
+                message = "I'm gloomy.";
+            else
+                message = "I'm sad.";
+            return this.Name + ":" + message;
         }
     }
 }
