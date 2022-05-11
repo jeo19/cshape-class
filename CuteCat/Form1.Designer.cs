@@ -28,13 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.CatScreen = new System.Windows.Forms.Label();
+            this.Play = new System.Windows.Forms.Button();
+            this.Feed = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // CatScreen
+            // 
+            this.CatScreen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.CatScreen.Location = new System.Drawing.Point(34, 44);
+            this.CatScreen.Name = "CatScreen";
+            this.CatScreen.Size = new System.Drawing.Size(734, 40);
+            this.CatScreen.TabIndex = 0;
+            this.CatScreen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Play
+            // 
+            this.Play.Location = new System.Drawing.Point(34, 107);
+            this.Play.Name = "Play";
+            this.Play.Size = new System.Drawing.Size(82, 36);
+            this.Play.TabIndex = 1;
+            this.Play.Text = "Play";
+            this.Play.UseVisualStyleBackColor = true;
+            this.Play.Click += new System.EventHandler(this.Play_Click);
+            // 
+            // Feed
+            // 
+            this.Feed.Location = new System.Drawing.Point(136, 107);
+            this.Feed.Name = "Feed";
+            this.Feed.Size = new System.Drawing.Size(82, 36);
+            this.Feed.TabIndex = 2;
+            this.Feed.Text = "Feed";
+            this.Feed.UseVisualStyleBackColor = true;
+            this.Feed.Click += new System.EventHandler(this.Feed_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Feed);
+            this.Controls.Add(this.Play);
+            this.Controls.Add(this.CatScreen);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label CatScreen;
+        private System.Windows.Forms.Button Play;
+        private System.Windows.Forms.Button Feed;
     }
 }
 

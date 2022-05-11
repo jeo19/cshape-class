@@ -18,5 +18,17 @@ namespace CuteCat
             InitializeComponent();
 
         }
+
+        private void Play_Click(object sender, EventArgs e)
+        {
+            MyCat.Paly();
+            CatScreen.Text = MyCat.Express();
+        }
+
+        private void Feed_Click(object sender, EventArgs e)
+        {
+            MyCat.Eat();
+            CatScreen.Text = MyCat.Express();
+        }
     }
 }
