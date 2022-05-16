@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.CatScreen = new System.Windows.Forms.Label();
             this.Play = new System.Windows.Forms.Button();
             this.Feed = new System.Windows.Forms.Button();
+            this.CatTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // CatScreen
@@ -62,6 +64,12 @@
             this.Feed.UseVisualStyleBackColor = true;
             this.Feed.Click += new System.EventHandler(this.Feed_Click);
             // 
+            // CatTimer
+            // 
+            this.CatTimer.Enabled = true;
+            this.CatTimer.Interval = 5000;
+            this.CatTimer.Tick += new System.EventHandler(this.CatTimer_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -81,6 +89,7 @@
         private System.Windows.Forms.Label CatScreen;
         private System.Windows.Forms.Button Play;
         private System.Windows.Forms.Button Feed;
+        private System.Windows.Forms.Timer CatTimer;
     }
 }
 

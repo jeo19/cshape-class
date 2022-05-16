@@ -30,5 +30,11 @@ namespace CuteCat
             MyCat.Eat();
             CatScreen.Text = MyCat.Express();
         }
+
+        private void CatTimer_Tick(object sender, EventArgs e)
+        {
+            MyCat.GetBored();
+            CatScreen.Text=MyCat.Express();
+        }
     }
 }
