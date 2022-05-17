@@ -12,29 +12,27 @@ namespace CuteCat
 {
     public partial class Form1 : Form
     {
-        private Cat MyCat=new Cat("lucas",1);
+      
         public Form1()
         {
             InitializeComponent();
 
         }
-
-        private void Play_Click(object sender, EventArgs e)
+       
+        private void label1_Click(object sender, EventArgs e)
         {
-            MyCat.Paly();
-            CatScreen.Text = MyCat.Express();
+
         }
 
-        private void Feed_Click(object sender, EventArgs e)
+        private void CreateCustomer_Click(object sender, EventArgs e)
         {
-            MyCat.Eat();
-            CatScreen.Text = MyCat.Express();
-        }
-
-        private void CatTimer_Tick(object sender, EventArgs e)
-        {
-            MyCat.GetBored();
-            CatScreen.Text=MyCat.Express();
+            Customer cus = new Customer("Son", "Humg min", 20);
+            cus.Address = "123 whire blvd";
+            CusFirstName.Text = cus.FirstName;
+            CusLastName.Text = cus.LastName;
+            CusAge.Text = cus.Age.ToString();
+            CusAddress.Text = cus.Address;
+            CusDescription.Text = cus.Description;
         }
     }
 }

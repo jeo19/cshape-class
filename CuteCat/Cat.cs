@@ -27,7 +27,7 @@ namespace CuteCat
 
         public void Paly()
         {
-            Happiness = Happiness + 1;
+            Happiness = Happiness + 10;
             if(Happiness > 100)
                 Happiness = 100;
         }
