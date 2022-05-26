@@ -21,14 +21,15 @@ namespace CuteCat
             this._Age = age;
             this._IsQualified = age >= 18;
         }
-        public int GetAge()
+       
+        public int Age
         {
-            return _Age;
+            get { return _Age; }
+            set { _Age = value; }
         }
-        public void SetAge(int age)
+        public bool IsQualified
         {
-            _Age = age;
-            _IsQualified = age >= 18;
+            get { return _IsQualified;}
         }
     }
 }

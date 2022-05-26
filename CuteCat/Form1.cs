@@ -33,8 +33,7 @@ namespace CuteCat
             CusAge.Text = cus.Age.ToString();
             CusAddress.Text = cus.Address;
             CusDescription.Text = cus.Description;
-
-            cus.IsQualified = true;
+            bool test=cus.IsQualified;
         }
     }
 }
