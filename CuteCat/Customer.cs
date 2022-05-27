@@ -31,5 +31,9 @@ namespace CuteCat
         {
             get { return _IsQualified;}
         }
+        public string FullName
+        {
+            get { return FirstName + " " + LastName; }
+        }
     }
 }

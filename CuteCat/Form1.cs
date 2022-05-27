@@ -26,14 +26,14 @@ namespace CuteCat
 
         private void CreateCustomer_Click(object sender, EventArgs e)
         {
-            Customer cus = new Customer("Son", "Humg min", 20);
+            Customer cus = new Customer("Son", "HungMin", 20);
             cus.Address = "123 whire blvd";
-            CusFirstName.Text = cus.FirstName;
-            CusLastName.Text = cus.LastName;
+            CusFullName.Text = cus.FullName;
             CusAge.Text = cus.Age.ToString();
             CusAddress.Text = cus.Address;
             CusDescription.Text = cus.Description;
             bool test=cus.IsQualified;
         }
+
     }
 }
