@@ -38,6 +38,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.CusFullName = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.CusIsQualified = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.CusDetailPannel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +55,8 @@
             // 
             // CusDetailPannel
             // 
+            this.CusDetailPannel.Controls.Add(this.CusIsQualified);
+            this.CusDetailPannel.Controls.Add(this.label2);
             this.CusDetailPannel.Controls.Add(this.CusDescription);
             this.CusDetailPannel.Controls.Add(this.label6);
             this.CusDetailPannel.Controls.Add(this.CusAddress);
@@ -69,7 +73,7 @@
             // CusDescription
             // 
             this.CusDescription.AutoSize = true;
-            this.CusDescription.Location = new System.Drawing.Point(80, 124);
+            this.CusDescription.Location = new System.Drawing.Point(80, 148);
             this.CusDescription.Name = "CusDescription";
             this.CusDescription.Size = new System.Drawing.Size(35, 13);
             this.CusDescription.TabIndex = 10;
@@ -78,7 +82,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 124);
+            this.label6.Location = new System.Drawing.Point(17, 148);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(63, 13);
             this.label6.TabIndex = 9;
@@ -87,7 +91,7 @@
             // CusAddress
             // 
             this.CusAddress.AutoSize = true;
-            this.CusAddress.Location = new System.Drawing.Point(80, 95);
+            this.CusAddress.Location = new System.Drawing.Point(80, 119);
             this.CusAddress.Name = "CusAddress";
             this.CusAddress.Size = new System.Drawing.Size(35, 13);
             this.CusAddress.TabIndex = 8;
@@ -96,7 +100,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(29, 95);
+            this.label5.Location = new System.Drawing.Point(29, 119);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 13);
             this.label5.TabIndex = 7;
@@ -138,6 +142,24 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Full Name:";
             // 
+            // CusIsQualified
+            // 
+            this.CusIsQualified.AutoSize = true;
+            this.CusIsQualified.Location = new System.Drawing.Point(80, 94);
+            this.CusIsQualified.Name = "CusIsQualified";
+            this.CusIsQualified.Size = new System.Drawing.Size(35, 13);
+            this.CusIsQualified.TabIndex = 12;
+            this.CusIsQualified.Text = "label2";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 94);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Adoptable:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -164,6 +186,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label CusDescription;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label CusIsQualified;
+        private System.Windows.Forms.Label label2;
     }
 }
 

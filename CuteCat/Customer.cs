@@ -10,22 +10,31 @@ namespace CuteCat
     {
         public string FirstName;
         public string LastName;
-        private int _Age;
+        private DateTime _Birthday;
         private bool _IsQualified;
         public string Address;
         public string Description;
-        public Customer(string firstName, string lastName, int age)
+        public Customer(string firstName, string lastName, DateTime birthday)
         {
             this.FirstName = firstName;
             this.LastName = lastName;
-            this._Age = age;
-            this._IsQualified = age >= 18;
+            this._Birthday=birthday;
+
+            this._IsQualified = DateTime.Now.Year-_Birthday.Year <= 18;
         }
        
+        public DateTime BirthDay
+        {
+            get { return this._Birthday; }
+            set
+            {
+                this._Birthday = value;
+                _IsQualified=Age <= 18;
+            }
+        }
         public int Age
         {
-            get { return _Age; }
-            set { _Age = value; }
+            get { return DateTime.Now.Year-_Birthday.Year; }
         }
         public bool IsQualified
         {

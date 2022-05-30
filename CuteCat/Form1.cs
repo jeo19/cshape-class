@@ -26,10 +26,12 @@ namespace CuteCat
 
         private void CreateCustomer_Click(object sender, EventArgs e)
         {
-            Customer cus = new Customer("Son", "HungMin", 20);
+            DateTime birthday=new DateTime(2000,1,1);
+            Customer cus = new Customer("Son", "HungMin", birthday);
             cus.Address = "123 whire blvd";
             CusFullName.Text = cus.FullName;
             CusAge.Text = cus.Age.ToString();
+            CusIsQualified.Text = cus.IsQualified.ToString();
             CusAddress.Text = cus.Address;
             CusDescription.Text = cus.Description;
             bool test=cus.IsQualified;
