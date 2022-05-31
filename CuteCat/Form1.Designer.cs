@@ -40,12 +40,24 @@
             this.label3 = new System.Windows.Forms.Label();
             this.CusIsQualified = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.CusNewPannel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.CusNewLastName = new System.Windows.Forms.TextBox();
+            this.CusNewFirstName = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.CusNewBirthday = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.CusNewAddress = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.CusNewDescription = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.CusDetailPannel.SuspendLayout();
+            this.CusNewPannel.SuspendLayout();
             this.SuspendLayout();
             // 
             // CreateCustomer
             // 
-            this.CreateCustomer.Location = new System.Drawing.Point(51, 51);
+            this.CreateCustomer.Location = new System.Drawing.Point(30, 52);
             this.CreateCustomer.Name = "CreateCustomer";
             this.CreateCustomer.Size = new System.Drawing.Size(96, 30);
             this.CreateCustomer.TabIndex = 0;
@@ -160,17 +172,118 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "Adoptable:";
             // 
+            // CusNewPannel
+            // 
+            this.CusNewPannel.Controls.Add(this.CusNewDescription);
+            this.CusNewPannel.Controls.Add(this.label10);
+            this.CusNewPannel.Controls.Add(this.CusNewAddress);
+            this.CusNewPannel.Controls.Add(this.label9);
+            this.CusNewPannel.Controls.Add(this.CusNewBirthday);
+            this.CusNewPannel.Controls.Add(this.label8);
+            this.CusNewPannel.Controls.Add(this.CusNewFirstName);
+            this.CusNewPannel.Controls.Add(this.label7);
+            this.CusNewPannel.Controls.Add(this.CusNewLastName);
+            this.CusNewPannel.Controls.Add(this.label1);
+            this.CusNewPannel.Location = new System.Drawing.Point(30, 105);
+            this.CusNewPannel.Name = "CusNewPannel";
+            this.CusNewPannel.Size = new System.Drawing.Size(421, 324);
+            this.CusNewPannel.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(19, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Last Name:";
+            // 
+            // CusNewLastName
+            // 
+            this.CusNewLastName.Location = new System.Drawing.Point(86, 20);
+            this.CusNewLastName.Name = "CusNewLastName";
+            this.CusNewLastName.Size = new System.Drawing.Size(100, 20);
+            this.CusNewLastName.TabIndex = 1;
+            // 
+            // CusNewFirstName
+            // 
+            this.CusNewFirstName.Location = new System.Drawing.Point(86, 46);
+            this.CusNewFirstName.Name = "CusNewFirstName";
+            this.CusNewFirstName.Size = new System.Drawing.Size(100, 20);
+            this.CusNewFirstName.TabIndex = 3;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(42, 49);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(38, 13);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Name:";
+            // 
+            // CusNewBirthday
+            // 
+            this.CusNewBirthday.Location = new System.Drawing.Point(86, 72);
+            this.CusNewBirthday.Name = "CusNewBirthday";
+            this.CusNewBirthday.Size = new System.Drawing.Size(100, 20);
+            this.CusNewBirthday.TabIndex = 5;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(27, 75);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(53, 13);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Birth Day:";
+            // 
+            // CusNewAddress
+            // 
+            this.CusNewAddress.Location = new System.Drawing.Point(86, 98);
+            this.CusNewAddress.Name = "CusNewAddress";
+            this.CusNewAddress.Size = new System.Drawing.Size(315, 20);
+            this.CusNewAddress.TabIndex = 7;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(32, 101);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(48, 13);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Address:";
+            // 
+            // CusNewDescription
+            // 
+            this.CusNewDescription.Location = new System.Drawing.Point(86, 127);
+            this.CusNewDescription.Multiline = true;
+            this.CusNewDescription.Name = "CusNewDescription";
+            this.CusNewDescription.Size = new System.Drawing.Size(315, 173);
+            this.CusNewDescription.TabIndex = 9;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(19, 127);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(63, 13);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "Description:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.CusNewPannel);
             this.Controls.Add(this.CusDetailPannel);
             this.Controls.Add(this.CreateCustomer);
             this.Name = "Form1";
             this.Text = "Form1";
             this.CusDetailPannel.ResumeLayout(false);
             this.CusDetailPannel.PerformLayout();
+            this.CusNewPannel.ResumeLayout(false);
+            this.CusNewPannel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -188,6 +301,17 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label CusIsQualified;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel CusNewPannel;
+        private System.Windows.Forms.TextBox CusNewDescription;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox CusNewAddress;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox CusNewBirthday;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox CusNewFirstName;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox CusNewLastName;
+        private System.Windows.Forms.Label label1;
     }
 }
 
