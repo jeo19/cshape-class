@@ -57,7 +57,7 @@
             // 
             // CreateCustomer
             // 
-            this.CreateCustomer.Location = new System.Drawing.Point(30, 52);
+            this.CreateCustomer.Location = new System.Drawing.Point(305, 325);
             this.CreateCustomer.Name = "CreateCustomer";
             this.CreateCustomer.Size = new System.Drawing.Size(96, 30);
             this.CreateCustomer.TabIndex = 0;
@@ -79,7 +79,7 @@
             this.CusDetailPannel.Controls.Add(this.label3);
             this.CusDetailPannel.Location = new System.Drawing.Point(472, 24);
             this.CusDetailPannel.Name = "CusDetailPannel";
-            this.CusDetailPannel.Size = new System.Drawing.Size(303, 405);
+            this.CusDetailPannel.Size = new System.Drawing.Size(303, 381);
             this.CusDetailPannel.TabIndex = 1;
             // 
             // CusDescription
@@ -176,6 +176,7 @@
             // 
             this.CusNewPannel.Controls.Add(this.CusNewDescription);
             this.CusNewPannel.Controls.Add(this.label10);
+            this.CusNewPannel.Controls.Add(this.CreateCustomer);
             this.CusNewPannel.Controls.Add(this.CusNewAddress);
             this.CusNewPannel.Controls.Add(this.label9);
             this.CusNewPannel.Controls.Add(this.CusNewBirthday);
@@ -184,9 +185,9 @@
             this.CusNewPannel.Controls.Add(this.label7);
             this.CusNewPannel.Controls.Add(this.CusNewLastName);
             this.CusNewPannel.Controls.Add(this.label1);
-            this.CusNewPannel.Location = new System.Drawing.Point(30, 105);
+            this.CusNewPannel.Location = new System.Drawing.Point(21, 24);
             this.CusNewPannel.Name = "CusNewPannel";
-            this.CusNewPannel.Size = new System.Drawing.Size(421, 324);
+            this.CusNewPannel.Size = new System.Drawing.Size(421, 381);
             this.CusNewPannel.TabIndex = 2;
             // 
             // label1
@@ -277,7 +278,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.CusNewPannel);
             this.Controls.Add(this.CusDetailPannel);
-            this.Controls.Add(this.CreateCustomer);
             this.Name = "Form1";
             this.Text = "Form1";
             this.CusDetailPannel.ResumeLayout(false);

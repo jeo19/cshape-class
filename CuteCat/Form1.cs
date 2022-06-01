@@ -26,9 +26,9 @@ namespace CuteCat
 
         private void CreateCustomer_Click(object sender, EventArgs e)
         {
-            DateTime birthday=new DateTime(2000,1,1);
-            Customer cus = new Customer("Son", "HungMin", birthday);
-            cus.Address = "123 whire blvd";
+            Customer cus = new Customer(CusNewLastName.Text, CusNewFirstName.Text, DateTime.Parse(CusNewBirthday.Text));
+            cus.Address = CusNewAddress.Text;
+            cus.Description=CusNewDescription.Text;
             CusFullName.Text = cus.FullName;
             CusAge.Text = cus.Age.ToString();
             CusIsQualified.Text = cus.IsQualified.ToString();
