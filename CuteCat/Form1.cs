@@ -12,30 +12,31 @@ namespace CuteCat
 {
     public partial class Form1 : Form
     {
-      
+        public Customer[] CustomerArray = new Customer[10];;
+        public int CustomerArrayIndex = 0;
         public Form1()
         {
             InitializeComponent();
 
         }
-       
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+ 
         private void CreateCustomer_Click(object sender, EventArgs e)
         {
-            Customer cus = new Customer(CusNewLastName.Text, CusNewFirstName.Text, DateTime.Parse(CusNewBirthday.Text));
-            cus.Address = CusNewAddress.Text;
-            cus.Description=CusNewDescription.Text;
-            CusFullName.Text = cus.FullName;
+            
+
+            CustomerArray[CustomerArrayIndex] = new Customer(CusNewLastName.Text, CusNewFirstName.Text, DateTime.Parse(CusNewBirthday.Text));
+            CustomerArray[CustomerArrayIndex].Address = CusNewAddress.Text;
+            CustomerArray[CustomerArrayIndex].Description=CusNewDescription.Text;
+
+            CustomerArrayIndex++;
+        }
+        public void ShowDetails(Customer cus)
+        {
+            CusFullName.Text=cus.FullName;
             CusAge.Text = cus.Age.ToString();
-            CusIsQualified.Text = cus.IsQualified.ToString();
             CusAddress.Text = cus.Address;
             CusDescription.Text = cus.Description;
-            bool test=cus.IsQualified;
+            CusIsQualified.Text = cus.IsQualified.ToString();
         }
-
     }
 }
