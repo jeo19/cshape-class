@@ -27,7 +27,9 @@ namespace CuteCat
             CustomerArray[CustomerArrayIndex] = new Customer(CusNewLastName.Text, CusNewFirstName.Text, DateTime.Parse(CusNewBirthday.Text));
             CustomerArray[CustomerArrayIndex].Address = CusNewAddress.Text;
             CustomerArray[CustomerArrayIndex].Description=CusNewDescription.Text;
-            ShowDetails(CustomerArray[CustomerArrayIndex]);
+
+            CustomerList.Items.Add(CustomerArray[CustomerArrayIndex].FullName);
+            //ShowDetails(CustomerArray[CustomerArrayIndex]);
             CustomerArrayIndex++;
         }
         private void ShowDetails(Customer cus)
@@ -37,6 +39,18 @@ namespace CuteCat
             CusAddress.Text = cus.Address;
             CusDescription.Text = cus.Description;
             CusIsQualified.Text = cus.IsQualified.ToString();
+        }
+
+        private void CustomerList_Click(object sender, EventArgs e)
+        {
+            string fullName=CustomerList.SelectedItem.ToString();
+            for(int i=0;i < CustomerArrayIndex; i++)
+            {
+                if (CustomerArray[i].FullName.Equals(fullName))
+                {
+                    ShowDetails(CustomerArray[i]);
+                }
+            }
         }
     }
 }
