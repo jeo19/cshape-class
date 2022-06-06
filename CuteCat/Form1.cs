@@ -72,7 +72,11 @@ namespace CuteCat
             for(int i=0; i<arrayList.Count; i++)
             {
                 int num = (int)arrayList[i];//Assign the type to force.
+                sum += num;
             }
+            int[] intArray = new int[5];
+            ArrayList arrayList1 = new ArrayList();
+            List<int> intList = new List<int>();
         }
     }
 }
