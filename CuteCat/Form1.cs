@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace CuteCat
 {
@@ -51,6 +52,22 @@ namespace CuteCat
                     ShowDetails(CustomerArray[i]);
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ArrayList arrayList = new ArrayList();
+            arrayList.Add(0);
+            arrayList.Add(1);
+            arrayList.Add(3);
+
+            arrayList.Insert(2, 2);
+            arrayList.Remove(2);// Remove array item with a value is 2.
+            arrayList.RemoveAt(1);// Remove array index is 1.
+            //arrayList[0]; 0
+            //arrayList[1]; 1
+            //arrayList[2]; 2
+            //arratList[3]; 3
         }
     }
 }
