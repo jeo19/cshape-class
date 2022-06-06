@@ -68,6 +68,11 @@ namespace CuteCat
             //arrayList[1]; 1
             //arrayList[2]; 2
             //arratList[3]; 3
+            int sum = 0;
+            for(int i=0; i<arrayList.Count; i++)
+            {
+                int num = (int)arrayList[i];//Assign the type to force.
+            }
         }
     }
 }
