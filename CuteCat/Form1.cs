@@ -13,29 +13,28 @@ namespace CuteCat
 {
     public partial class Form1 : Form
     {
-        private Customer[] CustomerArray = new Customer[10];
-        public int CustomerArrayIndex = 0;
+        private List<Customer> Customers = new List<Customer>();
         public Form1()
         {
             InitializeComponent();
 
         }
- 
+
         private void CreateCustomer_Click(object sender, EventArgs e)
         {
-            
 
-            CustomerArray[CustomerArrayIndex] = new Customer(CusNewLastName.Text, CusNewFirstName.Text, DateTime.Parse(CusNewBirthday.Text));
-            CustomerArray[CustomerArrayIndex].Address = CusNewAddress.Text;
-            CustomerArray[CustomerArrayIndex].Description=CusNewDescription.Text;
 
-            CustomerList.Items.Add(CustomerArray[CustomerArrayIndex].FullName);
+            Customer cus = new Customer(CusNewLastName.Text, CusNewFirstName.Text, DateTime.Parse(CusNewBirthday.Text));
+            cus.Address = CusNewAddress.Text;
+            cus.Description = CusNewDescription.Text;
+
+            CustomerList.Items.Add(cus.FullName);
             //ShowDetails(CustomerArray[CustomerArrayIndex]);
-            CustomerArrayIndex++;
+            Customers.Add(cus);
         }
         private void ShowDetails(Customer cus)
         {
-            CusFullName.Text=cus.FullName;
+            CusFullName.Text = cus.FullName;
             CusAge.Text = cus.Age.ToString();
             CusAddress.Text = cus.Address;
             CusDescription.Text = cus.Description;
@@ -44,12 +43,12 @@ namespace CuteCat
 
         private void CustomerList_Click(object sender, EventArgs e)
         {
-            string fullName=CustomerList.SelectedItem.ToString();
-            for(int i=0;i < CustomerArrayIndex; i++)
+            string fullName = CustomerList.SelectedItem.ToString();
+            foreach (Customer cus in Customers)
             {
-                if (CustomerArray[i].FullName.Equals(fullName))
+                if (cus.FullName == fullName)
                 {
-                    ShowDetails(CustomerArray[i]);
+                    ShowDetails(cus);
                 }
             }
         }
@@ -69,7 +68,7 @@ namespace CuteCat
             //arrayList[2]; 2
             //arratList[3]; 3
             int sum = 0;
-            for(int i=0; i<arrayList.Count; i++)
+            for (int i = 0; i < arrayList.Count; i++)
             {
                 int num = (int)arrayList[i];//Assign the type to force.
                 sum += num;
@@ -80,14 +79,15 @@ namespace CuteCat
             intList.Add(1);
             intList.Add(2);
             int sum2 = 0;
-            for(int i = 0; i < intList.Count; i++)
+            for (int i = 0; i < intList.Count; i++)
             {
-                int value=intArray[i];
-                sum2+=value;
+                int value = intArray[i];
+                sum2 += value;
             }
             foreach (int value in intList)
             {
-                sum2+=value;//The result is the same as above
+                sum2 += value;//The result is the same as above
             }
+        }
     }
 }
