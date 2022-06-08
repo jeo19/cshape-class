@@ -85,7 +85,9 @@ namespace CuteCat
                 int value=intArray[i];
                 sum2+=value;
             }
-
-        }
+            foreach (int value in intList)
+            {
+                sum2+=value;//The result is the same as above
+            }
     }
 }
