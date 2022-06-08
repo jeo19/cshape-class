@@ -77,6 +77,15 @@ namespace CuteCat
             int[] intArray = new int[5];
             ArrayList arrayList1 = new ArrayList();
             List<int> intList = new List<int>();
+            intList.Add(1);
+            intList.Add(2);
+            int sum2 = 0;
+            for(int i = 0; i < intList.Count; i++)
+            {
+                int value=intArray[i];
+                sum2+=value;
+            }
+
         }
     }
 }
