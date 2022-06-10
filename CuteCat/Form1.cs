@@ -28,7 +28,7 @@ namespace CuteCat
             cus.Address = CusNewAddress.Text;
             cus.Description = CusNewDescription.Text;
 
-            CustomerList.Items.Add(cus.FullName);
+            CusList.Rows.Add(cus.FullName, cus.Age, cus.IsQualified);
             //ShowDetails(CustomerArray[CustomerArrayIndex]);
             Customers.Add(cus);
         }
@@ -41,9 +41,9 @@ namespace CuteCat
             CusIsQualified.Text = cus.IsQualified.ToString();
         }
 
-        private void CustomerList_Click(object sender, EventArgs e)
+        private void CusList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string fullName = CustomerList.SelectedItem.ToString();
+            string fullName =(string) CusList.Rows[e.RowIndex].Cells[0].Value;
             foreach (Customer cus in Customers)
             {
                 if (cus.FullName == fullName)
@@ -53,7 +53,5 @@ namespace CuteCat
                 }
             }
         }
-
-
     }
 }

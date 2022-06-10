@@ -51,15 +51,20 @@
             this.label7 = new System.Windows.Forms.Label();
             this.CusNewLastName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.CustomerList = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.CusList = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CusDetailPannel.SuspendLayout();
             this.CusNewPannel.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CusList)).BeginInit();
             this.SuspendLayout();
             // 
             // CreateCustomer
             // 
-            this.CreateCustomer.Location = new System.Drawing.Point(191, 327);
+            this.CreateCustomer.Location = new System.Drawing.Point(191, 210);
             this.CreateCustomer.Name = "CreateCustomer";
             this.CreateCustomer.Size = new System.Drawing.Size(96, 30);
             this.CreateCustomer.TabIndex = 0;
@@ -79,15 +84,15 @@
             this.CusDetailPannel.Controls.Add(this.label4);
             this.CusDetailPannel.Controls.Add(this.CusFullName);
             this.CusDetailPannel.Controls.Add(this.label3);
-            this.CusDetailPannel.Location = new System.Drawing.Point(472, 24);
+            this.CusDetailPannel.Location = new System.Drawing.Point(425, 12);
             this.CusDetailPannel.Name = "CusDetailPannel";
-            this.CusDetailPannel.Size = new System.Drawing.Size(303, 381);
+            this.CusDetailPannel.Size = new System.Drawing.Size(309, 134);
             this.CusDetailPannel.TabIndex = 1;
             // 
             // CusIsQualified
             // 
             this.CusIsQualified.AutoSize = true;
-            this.CusIsQualified.Location = new System.Drawing.Point(80, 94);
+            this.CusIsQualified.Location = new System.Drawing.Point(76, 52);
             this.CusIsQualified.Name = "CusIsQualified";
             this.CusIsQualified.Size = new System.Drawing.Size(35, 13);
             this.CusIsQualified.TabIndex = 12;
@@ -96,7 +101,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 94);
+            this.label2.Location = new System.Drawing.Point(18, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 11;
@@ -105,7 +110,7 @@
             // CusDescription
             // 
             this.CusDescription.AutoSize = true;
-            this.CusDescription.Location = new System.Drawing.Point(80, 148);
+            this.CusDescription.Location = new System.Drawing.Point(76, 104);
             this.CusDescription.Name = "CusDescription";
             this.CusDescription.Size = new System.Drawing.Size(35, 13);
             this.CusDescription.TabIndex = 10;
@@ -114,7 +119,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 148);
+            this.label6.Location = new System.Drawing.Point(13, 104);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(63, 13);
             this.label6.TabIndex = 9;
@@ -123,7 +128,7 @@
             // CusAddress
             // 
             this.CusAddress.AutoSize = true;
-            this.CusAddress.Location = new System.Drawing.Point(80, 119);
+            this.CusAddress.Location = new System.Drawing.Point(76, 75);
             this.CusAddress.Name = "CusAddress";
             this.CusAddress.Size = new System.Drawing.Size(35, 13);
             this.CusAddress.TabIndex = 8;
@@ -132,16 +137,16 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(29, 119);
+            this.label5.Location = new System.Drawing.Point(28, 75);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 13);
+            this.label5.Size = new System.Drawing.Size(48, 13);
             this.label5.TabIndex = 7;
-            this.label5.Text = "Address";
+            this.label5.Text = "Address:";
             // 
             // CusAge
             // 
             this.CusAge.AutoSize = true;
-            this.CusAge.Location = new System.Drawing.Point(80, 65);
+            this.CusAge.Location = new System.Drawing.Point(76, 30);
             this.CusAge.Name = "CusAge";
             this.CusAge.Size = new System.Drawing.Size(35, 13);
             this.CusAge.TabIndex = 6;
@@ -150,7 +155,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(49, 65);
+            this.label4.Location = new System.Drawing.Point(47, 30);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 13);
             this.label4.TabIndex = 5;
@@ -159,7 +164,7 @@
             // CusFullName
             // 
             this.CusFullName.AutoSize = true;
-            this.CusFullName.Location = new System.Drawing.Point(80, 37);
+            this.CusFullName.Location = new System.Drawing.Point(76, 10);
             this.CusFullName.Name = "CusFullName";
             this.CusFullName.Size = new System.Drawing.Size(35, 13);
             this.CusFullName.TabIndex = 4;
@@ -168,7 +173,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 37);
+            this.label3.Location = new System.Drawing.Point(19, 10);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 13);
             this.label3.TabIndex = 3;
@@ -187,9 +192,9 @@
             this.CusNewPannel.Controls.Add(this.label7);
             this.CusNewPannel.Controls.Add(this.CusNewLastName);
             this.CusNewPannel.Controls.Add(this.label1);
-            this.CusNewPannel.Location = new System.Drawing.Point(154, 24);
+            this.CusNewPannel.Location = new System.Drawing.Point(425, 152);
             this.CusNewPannel.Name = "CusNewPannel";
-            this.CusNewPannel.Size = new System.Drawing.Size(303, 381);
+            this.CusNewPannel.Size = new System.Drawing.Size(309, 253);
             this.CusNewPannel.TabIndex = 2;
             // 
             // CusNewDescription
@@ -197,13 +202,13 @@
             this.CusNewDescription.Location = new System.Drawing.Point(86, 127);
             this.CusNewDescription.Multiline = true;
             this.CusNewDescription.Name = "CusNewDescription";
-            this.CusNewDescription.Size = new System.Drawing.Size(201, 173);
+            this.CusNewDescription.Size = new System.Drawing.Size(201, 68);
             this.CusNewDescription.TabIndex = 9;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(19, 127);
+            this.label10.Location = new System.Drawing.Point(17, 127);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(63, 13);
             this.label10.TabIndex = 8;
@@ -273,31 +278,50 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Last Name:";
             // 
-            // CustomerList
+            // panel1
             // 
-            this.CustomerList.FormattingEnabled = true;
-            this.CustomerList.Location = new System.Drawing.Point(12, 24);
-            this.CustomerList.Name = "CustomerList";
-            this.CustomerList.Size = new System.Drawing.Size(126, 212);
-            this.CustomerList.TabIndex = 3;
-            this.CustomerList.Click += new System.EventHandler(this.CustomerList_Click);
+            this.panel1.Controls.Add(this.CusList);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(352, 351);
+            this.panel1.TabIndex = 3;
             // 
-            // button1
+            // CusList
             // 
-            this.button1.Location = new System.Drawing.Point(63, 255);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.CusList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CusList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Age,
+            this.Column2});
+            this.CusList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CusList.Location = new System.Drawing.Point(0, 0);
+            this.CusList.Name = "CusList";
+            this.CusList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.CusList.Size = new System.Drawing.Size(352, 351);
+            this.CusList.TabIndex = 0;
+            this.CusList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CusList_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Name";
+            this.Column1.Name = "Column1";
+            // 
+            // Age
+            // 
+            this.Age.HeaderText = "Column2";
+            this.Age.Name = "Age";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Adoptable?";
+            this.Column2.Name = "Column2";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.CustomerList);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.CusNewPannel);
             this.Controls.Add(this.CusDetailPannel);
             this.Name = "Form1";
@@ -306,6 +330,8 @@
             this.CusDetailPannel.PerformLayout();
             this.CusNewPannel.ResumeLayout(false);
             this.CusNewPannel.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.CusList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -334,8 +360,11 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox CusNewLastName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox CustomerList;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView CusList;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Age;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }
 
